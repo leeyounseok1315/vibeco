@@ -1,0 +1,17 @@
+/* Custom Styles */
+body {
+    padding-top: 56px; /* Required padding for fixed-top navbar */
+}
+
+#home {
+    background: #f8f9fa;
+    padding: 6rem 0;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}

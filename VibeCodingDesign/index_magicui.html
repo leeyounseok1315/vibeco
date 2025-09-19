@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic UI 타이머</title>
+    <link rel="stylesheet" href="style_magicui.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="magic-card">
+        <div class="time-display-wrapper">
+            <h1 id="time-display" class="shine-text">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </h1>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="magic-button"><span>시작</span></button>
+            <button id="stop-btn" class="magic-button" style="display: none;"><span>중지</span></button>
+            <button id="reset-btn" class="magic-button secondary"><span>초기화</span></button>
+        </div>
+    </div>
+    <script src="script_magicui.js"></script>
+</body>
+</html>

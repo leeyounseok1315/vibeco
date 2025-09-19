@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadcn UI 스타일 타이머</title>
+    <link rel="stylesheet" href="style_shadcn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">타이머</h2>
+            <p class="card-description">시간을 설정하고 생산성을 높여보세요.</p>
+        </div>
+        <div class="card-content">
+            <div class="time-display">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+        </div>
+        <div class="card-footer">
+            <button id="reset-btn" class="btn btn-ghost">초기화</button>
+            <button id="stop-btn" class="btn btn-secondary" style="display: none;">중지</button>
+            <button id="start-btn" class="btn btn-primary">시작</button>
+        </div>
+    </div>
+    <script src="script_shadcn.js"></script>
+</body>
+</html>

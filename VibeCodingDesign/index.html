@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>깔끔한 타이머</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="timer-container">
+        <div class="progress-ring">
+            <svg class="progress-ring__svg">
+                <circle class="progress-ring__background" stroke-width="10" fill="transparent" r="140" cx="150" cy="150"/>
+                <circle class="progress-ring__circle" stroke-width="10" fill="transparent" r="140" cx="150" cy="150"/>
+            </svg>
+        </div>
+        <div class="time-display">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <div class="controls">
+            <button id="start-btn">시작</button>
+            <button id="stop-btn" style="display: none;">중지</button>
+            <button id="reset-btn">초기화</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

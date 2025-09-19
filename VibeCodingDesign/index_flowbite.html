@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowbite UI 스타일 타이머</title>
+    <link rel="stylesheet" href="style_flowbite.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="card">
+        <h1 class="card-title">Pomodoro Timer</h1>
+        <div class="time-display">
+            <span id="minutes">25</span>:<span id="seconds">00</span>
+        </div>
+        <div class="controls">
+            <button id="start-btn" class="btn btn-primary">
+                <i class="material-icons">play_arrow</i>
+                <span>시작</span>
+            </button>
+            <button id="stop-btn" class="btn btn-primary" style="display: none;">
+                <i class="material-icons">pause</i>
+                <span>중지</span>
+            </button>
+            <button id="reset-btn" class="btn btn-secondary">
+                <i class="material-icons">replay</i>
+                <span>초기화</span>
+            </button>
+        </div>
+        <div id="alert-complete" class="alert" style="display: none;">
+            <i class="material-icons">check_circle</i>
+            <span>세션이 완료되었습니다! 잠시 휴식을 취하세요.</span>
+        </div>
+    </div>
+    <script src="script_flowbite.js"></script>
+</body>
+</html>
