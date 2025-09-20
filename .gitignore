@@ -1,0 +1,6 @@
+# 모든 파일과 폴더를 무시
+*
+
+# 예외: news_backend 폴더와 .gitignore 파일만 포함
+!news_backend/
+!.gitignore
