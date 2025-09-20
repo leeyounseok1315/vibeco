@@ -1,11 +1,21 @@
 import sqlite3
 from fastapi import FastAPI, Depends, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import os
 from user_management import init_user_db, create_user, verify_user
 
 # FastAPI 앱 생성
 app = FastAPI()
+
+# CORS 미들웨어 추가
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"]  # 모든 출처 허용, 실제 프로덕션에서는 더 제한적인 설정 필요
+    allow_credentials=True,
+    allow_methods=["*"]  # 모든 HTTP 메소드 허용
+    allow_headers=["*"]  # 모든 HTTP 헤더 허용
+)
 
 # 데이터베이스 파일 경로
 DB_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'news.db')
@@ -62,7 +72,8 @@ def get_news(conn: sqlite3.Connection = Depends(get_db_connection)):
     """데이터베이스에서 모든 뉴스 기사를 가져와 반환합니다."""
     try:
         c = conn.cursor()
-        c.execute("SELECT id, title, url, summary, political_leaning, created_at FROM news ORDER BY created_at DESC")
+        # 이 줄을 아래와 같이 수정하세요.
+        c.execute("SELECT id, title, url, political_leaning, created_at FROM news ORDER BY created_at DESC") 
         news_list = c.fetchall()
         return [dict(row) for row in news_list]
     finally:
